@@ -1,0 +1,162 @@
+/**
+ * Elementor Apple Maps Widget - Enhanced Styles
+ */
+
+.elementor-apple-maps-container {
+    position: relative;
+    width: 100%;
+}
+
+.elementor-apple-maps {
+    width: 100%;
+    min-height: 300px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+/* Dark mode specific styles */
+.elementor-apple-maps[data-color-scheme="dark"] {
+    background-color: #1a1a1a;
+}
+
+.elementor-apple-maps[data-color-scheme="auto"] {
+    background-color: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    .elementor-apple-maps[data-color-scheme="auto"] {
+        background-color: #1a1a1a;
+    }
+}
+
+/* Ensure map controls are visible */
+.elementor-apple-maps .mk-controls {
+    z-index: 10;
+}
+
+/* Loading indicator */
+.elementor-apple-maps-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3898ec;
+    border-radius: 50%;
+    animation: elementor-apple-maps-loader 0.6s linear infinite;
+    z-index: 1;
+}
+
+.elementor-apple-maps.elementor-apple-maps-loaded::before {
+    display: none;
+}
+
+/* Fallback message for when MapKit JS fails to load */
+.elementor-apple-maps-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d9534f;
+    font-size: 14px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    max-width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Preview in editor */
+.elementor-apple-maps-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #555;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Animation for the loading indicator */
+@keyframes elementor-apple-maps-loader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .elementor-apple-maps {
+        min-height: 250px;
+    }
+}
+
+/* Alert styling for settings messages */
+.elementor-alert {
+    padding: 15px;
+    border-left: 5px solid transparent;
+    position: relative;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.elementor-alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.elementor-alert h5 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.elementor-alert p {
+    margin-bottom: 15px;
+}
+
+.elementor-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.elementor-button:hover {
+    background-color: #46b8da;
+    color: #fff;
+}
+
+.elementor-button-default {
+    background-color: #5bc0de;
+}
+
+/* Marker callout styling */
+.elementor-apple-maps .mk-callout-content {
+    padding: 5px 0;
+}
+
+.elementor-apple-maps .mapkit-callout-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.elementor-apple-maps .mapkit-callout-subtitle {
+    font-size: 12px;
+    color: #666;
+}
