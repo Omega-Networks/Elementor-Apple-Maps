@@ -2,8 +2,6 @@
 
 An advanced WordPress plugin that seamlessly integrates Apple Maps into your Elementor-powered website, providing a beautiful and feature-rich mapping experience.
 
-![Elementor Apple Maps Widget](assets/images/plugin-banner.png)
-
 ## Description
 
 Elementor Apple Maps brings the power of Apple's MapKit JS to your WordPress website through an intuitive Elementor widget. Unlike other mapping solutions, this plugin leverages Apple's beautiful map rendering, accurate data, and smooth performance to enhance your site with professional-grade maps.
